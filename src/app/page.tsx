@@ -12,7 +12,7 @@ export default async function Home() {
 
       <ul>
         {players?.map((player) =>
-          <Player player={player} playerCount={playerCount++} />
+          <Player key={playerCount} player={player} playerCount={playerCount++} />
         )}
       </ul>
 
