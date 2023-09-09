@@ -1,6 +1,5 @@
 import { kv } from "@vercel/kv";
 import Player from '../components/Player';
-import FormParticipate from "@/components/FormParticipate";
 
 export default async function Home() {
   const players = await kv.lrange<string>('players', 0, -1);
