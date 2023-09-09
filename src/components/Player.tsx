@@ -4,7 +4,7 @@ type PlayerCard = {
 };
 
 const Player = ({ player, playerCount }: PlayerCard) => {
-    return <li key={playerCount} className={playerCount < 15 ? 'team' : 'waiting'}>
+    return <li key={playerCount} className={playerCount < 16 ? 'team' : 'waiting'}>
         {playerCount}. {player} 
         <form method='get' action='/delete'>
             <input type="hidden" name="name" value={player}/>
