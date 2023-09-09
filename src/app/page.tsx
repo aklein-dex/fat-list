@@ -7,7 +7,7 @@ export default async function Home() {
   let playerCount: number = 1;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-18">
       <div>
         Futsal AXA Tokyo<br/>
         Next game: October 10th
