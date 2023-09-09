@@ -5,11 +5,11 @@ type PlayerCard = {
 
 const Player = ({ player, playerCount }: PlayerCard) => {
     return <li key={playerCount} className={playerCount < 2 ? 'team' : 'waiting'}>
-        {playerCount} 🚀✅ {player} 
+        {playerCount}. {player} 
         <form method='get' action='/delete'>
             <input type="hidden" name="name" value={player}/>
-            Pwd <input type="text" name="password" />
-            <button type="submit">x</button>
+            pin # <input type="password" name="password" size={4}/>
+            <button className="btn-del" type="submit">🚽 X</button>
         </form>
     </li>;
 }
