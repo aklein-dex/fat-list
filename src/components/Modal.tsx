@@ -23,7 +23,7 @@ const Modal = ({ player }: Player) => {
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                                 <form method='get' action='/delete' className="bg-gray-200 shadow-md rounded px-6 pt-5 pb-5 w-full">
                                     <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t ">
-                                        <h3 className="text-xl text-black font=semibold">Do you want to cancel?</h3>
+                                        <h3 className="text-xl text-black font=semibold">{player}, do you want to cancel your participation?</h3>
                                     </div>
                                     <div className="relative p-6 flex-auto">
 
