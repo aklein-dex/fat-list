@@ -12,19 +12,20 @@ type Props = {
 export default async function Delete(props: Props) {
   const { name, password } = props.searchParams;
 
+  console.log(`Delete: receive request for ${name}`);
   const exist = await kv.get(name);
 
   if (exist) {
-    const passwordInCache = await kv.get<string>(name) || '';
-    // I don't know why, I can compare passwordInCache... so I must convert it to json!
-    const json = JSON.stringify(passwordInCache);
+    console.log(`Delete: user ${name} exists in Redis`);
+    const passwordInCache = await kv.get<string>(name);
 
-    if (json === password) {
+    if (passwordInCache && passwordInCache.toString() === password) {
+      console.log(`Delete: password is matching, deleting user ${name}`);
       await kv.lrem('players', 0, name);
       await kv.del(name);
     }
     
   }
-  console.log(name)
+
   redirect('/');
 }
