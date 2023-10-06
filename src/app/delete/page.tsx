@@ -15,17 +15,21 @@ export default async function Delete(props: Props) {
   console.log(`Delete: receive request for ${name}`);
   const exist = await kv.get(name);
 
-  if (exist) {
-    console.log(`Delete: user ${name} exists in Redis`);
-    const passwordInCache = await kv.get<string>(name);
-
-    if (passwordInCache && passwordInCache.toString() === password) {
-      console.log(`Delete: password is matching, deleting user ${name}`);
-      await kv.lrem('players', 0, name);
-      await kv.del(name);
-    }
-    
+  if (!exist) {
+    console.log(`Delete: user ${name} doesnt exist`);
+    redirect('/');
   }
+
+  const passwordInCache = await kv.get<string>(name);
+
+  if (!passwordInCache || passwordInCache.toString() !== password) {
+    console.log(`Delete: password doesnt match`);
+    redirect('/');
+  }
+
+  console.log(`Delete: password is matching, deleting user ${name}`);
+  await kv.lrem('players', 0, name);
+  await kv.del(name);
 
   redirect('/');
 }
