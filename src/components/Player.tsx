@@ -9,7 +9,7 @@ type PlayerCard = {
 
 const Player = ({ player, playerCount }: PlayerCard) => {
     return <li key={playerCount} className={playerCount < 16 ? 'team' : 'waiting'}>
-        {playerCount}. {player} 
+        {playerCount}. <input type="checkbox"></input> {player}
         <Modal player={player}/>
     </li>;
 }
