@@ -10,8 +10,9 @@ export default async function Home() {
 
       <div className="mt-4 mb-4 font-bold tracking-tight text-white-900 sm:text-4xl text-3xl">
         Futsal AXA Tokyo<br />
-        Next game: October 24th<br />
-        Aquafield, Shibakoen station
+        Next game: October 31st 🎃<br />
+        Aquafield, Shibakoen station<br />
+        19:00-21:00
       </div>
 
       <div className="border-b border-gray-900/10 pb-12">
