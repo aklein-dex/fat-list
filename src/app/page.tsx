@@ -10,8 +10,8 @@ export default async function Home() {
 
       <div className="mt-4 mb-4 font-bold tracking-tight text-white-900 sm:text-4xl text-3xl">
         Futsal AXA Tokyo<br />
-        Next game: June, 14th<br />
-        Aquafield, Shibakoen station<br />
+        Next game: June, 19th<br />
+        芝浦中央公園運動場 フットサル場, Shinagawa station<br />
         19:00-21:00
       </div>
 
