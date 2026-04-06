@@ -10,9 +10,9 @@ export default async function Home() {
 
       <div className="mt-4 mb-4 font-bold tracking-tight text-white-900 sm:text-4xl text-3xl">
         Futsal AXA Tokyo<br />
-        Next game: April, FRIDAY 3rd<br />
-        アクアフィールド芝公園<br />
-        19:00-21:00
+        Next game: April, SATURDAY 11th<br />
+        Aoyama Elementary School<br />
+        15:00-18:00
       </div>
 
       <div className="border-b border-gray-900/10 pb-12">
